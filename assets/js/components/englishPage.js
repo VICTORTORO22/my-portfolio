@@ -1,19 +1,18 @@
 // Cambiar idioma a ingles
 export function changeLanguage() {
     const checkbox = document.getElementById('language-toggle');
-    const languageContainer = document.querySelector('.navbar__toggle--language');
+    const languageCurrent = window.location.href.includes('indexIngles.html')
+    checkbox.checked = languageCurrent
 
     checkbox.addEventListener('change', function() {
-        if (this.checked) {
+        if (checkbox.checked) {
             // Redirect to the English page
-            window.location.href = 'http://127.0.0.1:5500/indexIngles.html#home';
-            // Aplicar la clase para la bandera del Reino Unido
-            languageContainer.classList.add('english-flag-position');
+            window.location.href = 'indexIngles.html';
+          
         } else {
             // Redirect to the Spanish page
-            window.location.href = 'http://127.0.0.1:5500/index.html#home';
-            // Quitar la clase para la bandera del Reino Unido
-            languageContainer.classList.remove('english-flag-position');
+            window.location.href = 'index.html';
+      
         }
     });
 }
