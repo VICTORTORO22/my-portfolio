@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!-- trabajar con todos los caracteres  -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--sacel = 1.0 para que no este escalado  (width=device-width) responsibo para que no se desborde el contenido  -->
+		<!-- Titulo del documento  -->
+		<meta name="author" content="Victor Alfonso Toro P">
+		<!-- descripción del contenido de una página web (portafolio) -->
+		<meta name="description" content="No más de 165 caracteres" />
+		<!-- indicar a los motores de búsqueda las palabras clave o frases clave que estaban asociadas con una página web 'se esat dejando de utilizar' -->
+		<meta
+			name="keywords"
+			content="palabra clave 1, palabra clave 2, palabra clave 3"
+		/>
+		<!-- definir el color de tema principal de una página web -->
+		<meta name="theme-color" content="#09f" />
+		<!-- Fuente  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- link para los Iconos  -->
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+
+		<title>Mi Portafolio</title>
+		<!-- icono en la pestaña superior -->
+		<link rel="icon" href="assets/img/logo.png" type="image/png" />
+		<!-- link del estilado css  -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<!-- vincular mi codigo script, se trabajara con modulos (defer= espera a que se cargue todo el archivo html y css y por ultimo se carga el scrip para que no genere errores )-->
+		<script type="module" src="assets/js/main.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init({
+					publicKey: 'eepJ3aozWvvDMEzPM',
+				});
+			})();
+		</script>
+	</head>
+
+	<body>
+		<header class="header">
+			<nav class="navbar grid--container flex--container">
+				<a class="navbar__logo flex--container" href="#"
+					><i class="bx bx-registered"></i>Victor Toro</a
+				>
+
+				<div id="nav" class="navbar__menu">
+					<a href="#close"
+						><i class="bx bxs-x-square btn__close navbar__icon flex--container"></i
+					></a>
+
+					<ul class="navbar__list flex--container">
+						<li class="navbar__item">
+							<a class="navbar__link active" href="#home">Home</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#about">About Me</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#skills">Skills</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#projects">Portafolio</a>
+						</li>
+						<li class="navbar__item">
+							<a class="navbar__link" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar__toggles flex--container">
+					<div class="navbar__toggle--darkmode flex--container">
+						<input
+							type="checkbox"
+							name="color-scheme"
+							id="darkmode-toggle"
+							class="navbar__toggle--darkmode-input"
+						/>
+						<label for="darkmode-toggle" class="navbar__toggle--darkmode-label">
+							<i class="bx bx-sun navbar__toggle--darkmode-sun"></i>
+							<i class="bx bx-moon navbar__toggle--darkmode-moon"></i>
+						</label>
+					</div>
+					<div class="navbar__toggle--language flex--container">
+						<input
+							type="checkbox"
+							id="language-toggle"
+							class="navbar__toggle--language-input"
+						/>
+						<label
+							for="language-toggle"
+							class="navbar__toggle--language-label"
+						></label>
+					</div>
+				</div>
+				<a href="#nav"><i class="bx bx-menu btn__open navbar__icon"></i></a>
+			</nav>
+		</header>
+
+		<main>
+			<section id="home" class="home">
+				<i class="bx bxl-html5 home__layer home__layer--1" data-speed="-5"></i>
+				<i
+					class="bx bxl-javascript home__layer home__layer--2"
+					data-speed="5"
+				></i>
+				<i class="bx bxl-css3 home__layer home__layer--3" data-speed="2"></i>
+				<i class="bx bxl-nodejs home__layer home__layer--4" data-speed="6"></i>
+				<i class="bx bxl-react home__layer home__layer--5" data-speed="8"></i>
+				<i
+					class="bx bxl-tailwind-css home__layer home__layer--6"
+					data-speed="-2"
+				></i>
+				<i class="bx bxl-redux home__layer home__layer--7" data-speed="4"></i>
+				<i
+					class="bx bxl-typescript home__layer home__layer--8"
+					data-speed="-2"
+				></i>
+				<i class="bx bxl-git home__layer home__layer--9" data-speed="6"></i>
+				<i
+					class="bx bxl-graphql home__layer home__layer--10"
+					data-speed="-7"
+				></i>
+				<i
+					class="bx bx-code-alt home__layer home__layer--11"
+					data-speed="-5"
+				></i>
+				<div class="home__container grid--container">
+					<div class="home__image">
+						<img class="image__profile"
+							src="assets/img/imagen4-.png"
+							alt="profile photo"
+							title="Victor Toro"
+						/>
+					</div>
+
+					<ul class="home__social flex--container">
+						<li class="home__social-item">
+							<a class="home__social-link" href="#" target="_blank"
+								><i class="bx bxl-linkedin-square"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="#" target="_blank"
+								><i class="bx bxl-whatsapp-square"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="#" target="_blank"
+								><i class="bx bxl-github"></i
+							></a>
+						</li>
+						<li class="home__social-item">
+							<a class="home__social-link" href="#" target="_blank"
+								><i class="bx bxs-envelope"></i
+							></a>
+						</li>
+					</ul>
+
+					<div class="home__info">
+						<h1 class="home__title">Hello, I'm Victor.</h1>
+
+						<p class="home__description">
+							I am a passionate web developer in training focused on full-stack programming. I have a strong interest in learning and tackling challenges to constantly improve my skills and knowledge in the field
+						</p>
+					</div>
+
+					<div class="home__buttons">
+						<a
+							class="btn btn--primary"
+							href=""
+							title="Descargar mi CV"
+							download="Hola de vida Victor Toro"
+							rel="noreferrer nofollow"
+						>
+							Dowload CV
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="about" class="about section">
+				<h2 class="section__title">About Me</h2>
+
+				<div class="about__container grid--container">
+					<p class="about__description">
+						
+						I am an enthusiastic web developer with knowledge in JavaScript, PHP, CSS, Java, Python, and SQL. My passion for learning and my discipline drive me to face new challenges every day. I value teamwork and effective communication as fundamental pillars for success in any project. Additionally, I consider myself a proactive person, always seeking innovative solutions to the problems I encounter. I am constantly seeking opportunities to expand my skills and knowledge in the world of web development, and I am excited to contribute to projects that challenge and stimulate my professional growth.
+					</p>
+
+					<div class="about__cards flex--container">
+						<!--Card 1 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets/img/imagen1.jpg"
+								alt="Laborando como ingeniero"
+								title="Laborando como ingeniero"
+							/>
+						</div>
+						<!--Card 2 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets/img/Imagen2.jpg"
+								alt="Laborando como diseñador"
+								title="Laborando como diseñador"
+							/>
+						</div>
+						<!--Card 3 -->
+						<div class="about__card">
+							<img
+								class="about__card--img"
+								src="assets/img/Imagen3.jpg"
+								alt="Trabajando en equipo"
+								title="rabajando en equipo"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="skills" class="skills section">
+				<h2 class="section__title">Habilidades</h2>
+
+				<div class="skills__container grid--container">
+					<p class="skills__description flex--container">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+						incidunt aut distinctio maxime recusandae. Velit exercitationem
+						ducimus cupiditate corrupti eveniet soluta accusamus quasi,
+						suscipit, vitae optio, officiis rerum cumque numquam.
+					</p>
+
+					<div class="skills__wrapper flex--container">
+						<div class="skills__cards flex--container">
+							<!--Card 1 -->
+							<details class="skills__cards-container" name="moreInfo" open>
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-html5 flex--container"></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">HTML</h3>
+
+									<p class="skills__card-description">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Est, fuga nesciunt, officia nobis blanditiis in aperiam
+										voluptatum officiis repellendus beatae consectetur. In,
+										provident excepturi? Ratione doloribus consequuntur sit
+										officia cupiditate HTML.
+									</p>
+								</div>
+							</details>
+							<!--Card 2 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-css3 flex--container"></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">CSS3</h3>
+
+									<p class="skills__card-description">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Est, fuga nesciunt, officia nobis blanditiis in aperiam
+										voluptatum officiis repellendus beatae consectetur. In,
+										provident excepturi? Ratione doloribus consequuntur sit
+										officia cupiditate.
+									</p>
+								</div>
+							</details>
+							<!--Card 3 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-javascript flex--container"></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">Javascript</h3>
+
+									<p class="skills__card-description">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Est, fuga nesciunt, officia nobis blanditiis in aperiam
+										voluptatum officiis repellendus beatae consectetur. In,
+										provident excepturi? Ratione doloribus consequuntur sit
+										officia cupiditate.
+									</p>
+								</div>
+							</details>
+							<!--Card 4 -->
+							<details class="skills__cards-container" name="moreInfo">
+								<summary class="skills__cards-title flex--container">
+									<i class="bx bxl-react flex--container"></i>
+								</summary>
+								<div class="skills__card-container">
+									<h3 class="skills__card-title">React</h3>
+
+									<p class="skills__card-description">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Est, fuga nesciunt, officia nobis blanditiis in aperiam
+										voluptatum officiis repellendus beatae consectetur. In,
+										provident excepturi? Ratione doloribus consequuntur sit
+										officia cupiditate.
+									</p>
+								</div>
+							</details>
+						</div>
+					</div>
+					<div class="skills__tags flex--container">
+						<h3 class="skills__tags-title">Soft Skills</h3>
+                        <div class="skills__tags-container flex--container">
+                            <span class="skills__tag">Teamwork</span>
+                            <span class="skills__tag">Effective Communication</span>
+                            <span class="skills__tag">Continuous Learning</span>
+                            <span class="skills__tag">Critical Thinking</span>
+                            <span class="skills__tag">Proactive</span>
+                            <span class="skills__tag">Self-taught</span>
+                        </div>
+					</div>
+				</div>
+			</section>
+			<section id="projects" class="projects section">
+				<h2 class="section__title">Projects</h2>
+				<!-- proyecto 1 -->
+				<div class="projects__container grid--container">
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image">
+								<img
+									src="assets/img/project1.jpg"
+									alt="project 1"
+									title="Ecommerce Vanilla"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">Project 1</h3>
+								<p class="projects__description">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+                                        VIEW DEMO
+                                    </button>
+									<button class="btn projects__button" type="button">
+										VIEW CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- proyecto 2 -->
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image">
+								<img
+									src="assets/img/project2.png"
+									alt="project 1"
+									title="Consumiendo API Pokemon con React"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">Project 2</h3>
+								<p class="projects__description">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+										VIEW DEMO
+									</button>
+									<button class="btn projects__button" type="button">
+										VIEW CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- proyecto 3 -->
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image">
+								<img
+									src="assets/img/project3.jpg"
+									alt="project 1"
+									title="CRUD con React"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">Proyect 3</h3>
+								<p class="projects__description">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+										VIEW DEMO
+									</button>
+									<button class="btn projects__button" type="button">
+										VIEW CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- proyecto 4 -->
+					<div class="projects__project">
+						<div class="projects__inner grid--container">
+							<div class="projects__image">
+								<img
+									src="assets/img/project4.png"
+									alt="project 1"
+									title="Aplicación del tiempo con React"
+								/>
+							</div>
+
+							<div class="projects__info">
+								<h3 class="projects__name">Project 4</h3>
+								<p class="projects__description">
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+								</p>
+
+								<div class="projects__buttons">
+									<button class="btn projects__button" type="button">
+										VIEW DEMO
+									</button>
+									<button class="btn projects__button" type="button">
+										VIEW CÓDIGO
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="contact section">
+				<h2 class="section__title">Contact</h2>
+
+				<div class="contact__container grid--container">
+					<div class="contact__info">
+						<h3 class="contact__info-title">Contact Information</h3>
+						<p class="contact__info-description">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+
+						<address class="contact__info-data">
+							<div class="contact__info-item">
+								<i class="bx bxl-whatsapp-square"></i>
+
+								<span class="contact__info-number">
+									<a
+										href="https://wa.me/+573205126747?text=Tu%20Mensaje%20De%20Texto"
+										target="_blank"
+										rel="noreferrer nofollow"
+										>Send message via WhatsApp</a
+									>
+								</span>
+							</div>
+
+							<div class="contact__info-item">
+								<i class='bx bxs-phone-call'></i>
+
+								<span class="contact__info-number">
+									<a
+										href="tel:57-320-512-6747"
+										target="_blank"
+										rel="noreferrer nofollow"
+									>
+										320 512 6747
+									</a>
+								</span>
+							</div>
+
+							<div class="contact__info-item">
+								<i class="bx bxs-envelope"></i>
+
+								<span class="contact__info-mail">
+									<a
+										id="mail"
+										href="mailto:viktortoro240@hotmail.com"
+										target="_blank"
+										rel="noreferrer nofollow"
+									>
+										viktortoro240@hotmail.com
+									</a>
+								</span>  
+							</div>
+
+							<div class="contact__info-item">
+								<i class="bx bx-map"></i>
+
+								<span class="contact__info-map"> Manizales, Colombia. </span>
+							</div>
+						</address>
+					</div>
+					<div class="contact__form">
+						<h3 class="contact__form-title">Send Message</h3>
+						<form id="form" class="contact__form-container">
+							<div class="contact__form-group">
+								<label for="name" class="contact__form-label">Name</label>
+								<input
+									type="text"
+									id="name"
+									name="name"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="email" class="contact__form-label">Mail</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="subject" class="contact__form-label">Affair</label>
+								<input
+									type="text"
+									id="subject"
+									name="subject"
+									class="contact__form-input"
+								/>
+							</div>
+
+							<div class="contact__form-group">
+								<label for="message" class="contact__form-label">Message</label>
+								<textarea
+									id="message"
+									name="message"
+									cols="30"
+									rows="10"
+									class="contact__form-input"
+								></textarea>
+							</div>
+							<dialog id="modal">
+								Form submitted successfully!
+								<button type="reset" id="btn_close-modal">close</button>
+							</dialog>
+
+							<button type="submit" class="btn contact__form-button">
+								Send
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer section">
+			<div class="footer__container grid--container">
+				<div class="footer__info">
+					<h3 class="footer__title">Víctor Toro</h3>
+					<p class="footer__description">
+						I am a web developer, passionate about technology and programming.
+					</p>
+				</div>
+
+				<div class="footer__social">
+					<h3 class="footer__title">Social networks</h3>
+
+					<ul class="footer__social-list">
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="#"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-facebook"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="#"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-instagram"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="#"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-twitter"></i
+							></a>
+						</li>
+
+						<li class="footer__social-item">
+							<a
+								class="footer__social-link"
+								href="#"
+								target="_blank"
+								rel="noreferrer nofollow"
+								><i class="bx bxl-linkedin"></i
+							></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<p class="footer__copy"></p>
+		</footer>
+	</body>
+</html>
